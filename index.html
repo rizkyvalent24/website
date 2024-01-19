@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Tugas-13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+</head>
+<body>
+    <div class="w3-container">
+        <img src="css/legend.png" alt="inoenbanner" style="height: 50%;width: 100%;">
+    </div>
+
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="Menu('Nirvana')">Nirvana</button>
+        <button class="w3-bar-item w3-button" onclick="Menu('The Beatles')">The Beatles</button>
+        <button class="w3-bar-item w3-button" onclick="Menu('Queen')">Queen</button>
+        <button class="w3-bar-item w3-button" onclick="Menu('Scorpions')">Scorpions</button>
+    </div>
+    <div id="Nirvana" class="w3-container char w3-animate-fading" style="display: none;">
+        <h2>Nirvana</h2>
+        <img src="css/Nirvana.jpg" alt="Nirvana"> 
+    </div>
+	
+    <div id="The Beatles" class="w3-container char w3-animate-bottom" style="display: none;">
+        <h2>The Beatles</h2>
+        <img src="css/thebeatles.jpeg" alt="The Beatles">
+    </div>
+
+    <div id="Queen" class="w3-container char w3-animate-top" style="display: none;">
+        <h2>Queen</h2>
+        <img src="css/queen.jpg" alt="Queen">
+    </div>
+
+    <div id="Scorpions" class="w3-container char w3-animate-zoom" style="display: none;">
+        <h2>Scorpions</h2>
+        <img src="css/scorpions.jpg" alt="Scorpions">
+    </div>
+
+    <script>
+        function Menu(Karakter) {
+            var i;
+            var x = document.getElementsByClassName("char");
+            for (i = 0;i < x.length;i++){
+                x[i].style.display = "none";
+            }
+            document.getElementById(Karakter).style.display = "block";
+        }
+    </script>
+</body>
+</html>
